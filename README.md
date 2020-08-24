@@ -33,7 +33,7 @@
 
 ### 2.1 Comparison Table
 
-![Fixed](/uploads/fcbc3f87562e43c35847f4b71e306746/Fixed.png)
+![fx](/uploads/03bc3497bc281029535f2dcfcbb4772f/fx.png)
 
 ## 3. Execution
 
