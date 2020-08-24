@@ -38,3 +38,34 @@
 ## 3. Execution
 
 ### 3.1 Makefile
+
+* makefile을 통해 일일이 모든 .c파일을 컴파일할 필요 없이 'make' command로 실행파일을 생성할 수 있도록 하였습니다.
+
+1. Make ( default )
+기본적인 make 명령어로 생성되는 실행파일은 'fx_s4716'을 기반으로 'double'형의 값들을 변환하여 계산해주는 프로그램입니다.
+```
+$ make
+```
+
+2. make ( 기동 system 변경 )
+실행파일을 만들때, 'fx_s4716'기반이 아닌, 다른 고정 소수점에 대한 계산을 할 때, 아래의 명령어를 사용.
+```
+$ make SYSTEM=_FX_SXXXX
+```
+
+3. make ( 자료형 변경 )
+'double'형의 값들이 아닌, long long int 형의 값들을 변환할 때, 아래의 명령어를 사용.
+```
+$ make TYPE=_FX_LONGLONG
+```
+
+* 위의 2,3 번에 해당하는 명령어는 중복으로 적용하여 처리가 가능.
+```
+$ make SYSTEM=_FX_S2308 TYPE=_FX_LONGLONG
+```
+
+4. make로 생성된 파일 처리
+make 명령어로 생성된 파일을 정리/제거하고 싶은 경우, 아래의 명령어를 사용.
+```
+$ make clean
+```
