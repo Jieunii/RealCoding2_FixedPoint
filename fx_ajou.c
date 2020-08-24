@@ -146,6 +146,7 @@ double fix_to_double(fx_type fa) {
 	result = FX_S1615_INT_TO_DOUBLE(fa);
 	return result;
 }
+
 #elif _FX_SYSTEM == _FX_S3231
 typedef fx_s3231 fx_type;
 
@@ -284,6 +285,7 @@ double fix_to_double(fx_type fa) {
 	result = FX_S1615_INT_TO_DOUBLE(fa);
 	return result;
 }
+
 #elif _FX_SYSTEM == _FX_S1516
 typedef fx_s1516 fx_type;
 
@@ -422,6 +424,7 @@ double fix_to_double(fx_type fa) {
 	//  result = fx_s1516_to_double(fa);  make과정에서 오류발생하여 사용하지 않기로 결정.
 	return result;
 }
+
 #elif _FX_SYSTEM == _FX_S3132
 typedef fx_s3132 fx_type;
 
@@ -560,6 +563,7 @@ double fix_to_double(fx_type fa) {
 	result = fx_s3132_to_double(fa);
 	return result;
 }
+
 #elif _FX_SYSTEM == _FX_S2308
 typedef fx_s2308 fx_type;
 
@@ -698,6 +702,7 @@ double fix_to_double(fx_type fa) {
 	result = FX_S2308_TO_DOUBLE(fa);
 	return result;
 }
+
 #elif _FX_SYSTEM == _FX_S4716
 typedef fx_s4716 fx_type;
 
