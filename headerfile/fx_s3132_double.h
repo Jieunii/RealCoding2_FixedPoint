@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #define P_2TO32 4294967296.0
-#define PI 3.141592653
+#define PI 3.141592
+//65i3
 #define _FX_S3132_FX_TO_DOUBLE(a) (a/P_2TO32)
 #define _FX_S3132_DOUBLE_TO_FX(a) (long long)(a*P_2TO32)
 #define _FX_S3132_ADD(a, b) ((a)+(b))

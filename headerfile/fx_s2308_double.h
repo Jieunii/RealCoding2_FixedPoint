@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 typedef int fx_s2308;
 #define FX_TO_DOUBLE(a) ((double) (a/(256.0)))
 #define FX_TO_FLOAT(a) ((float) (a/(256.0)))
@@ -9,8 +9,12 @@ typedef int fx_s2308;
 #define FX_SUB(a,b) ((a)-(b))
 #define FX_MUL(a,b) DOUBLE_TO_FX(FX_TO_DOUBLE(a)*FX_TO_DOUBLE(b))
 #define FX_DIV(a,b) DOUBLE_TO_FX(FX_TO_DOUBLE(a)/FX_TO_DOUBLE(b))
+#ifndef PI
 #define PI 3.141592
+#endif
+#ifndef FX_PI
 #define FX_PI (DOUBLE_TO_FX(PI))
+#endif
 #define FX_INV_PI (DOUBLE_TO_FX(1/PI))
 
 

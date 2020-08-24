@@ -59,7 +59,7 @@ fx_type fx_div(fx_type fa, fx_type fb){
     return result;
 }
 
-fx_type fx_pow(fx_type fa, fx_type fb)
+fx_type fx_get_pow(fx_type fa, fx_type fb)
 {
     fx_type result = 0;
 
@@ -95,7 +95,7 @@ fx_type fx_sqrt(fx_type fa)
 #elif _FX_SYSTEM == _FX_S2308
     result = fx_s2308_double_sqrt(fa);
 #elif _FX_SYSTEM == _FX_S4716
-    result = FX_S4716_DOUBLE_SQRT(FX_S4716_TO_DOUBLE(fa));
+    result = FX_S4716_DOUBLE_SQRT(FX_TO_DOUBLE(fa));
 #endif 
 
     return result;
@@ -367,7 +367,7 @@ fx_type fx_sin(fx_type fa)
     return result;
 }
 
-fx_type double_to_fx(double a){
+fx_type double_to_fix(double a){
     fx_type result = 0;
 
 #if _FX_SYSTEM == _FX_S1615
@@ -375,19 +375,19 @@ fx_type double_to_fx(double a){
 #elif _FX_SYSTEM == _FX_S3231
     result = doubleToFx(a);
 #elif _FX_SYSTEM == _FX_S1516
-    result = double_to_fx_s1516(a);
+//   result = double_to_fx_s1516(a);
 #elif _FX_SYSTEM == _FX_S3132
     result = double_to_fx_s3132(a);
 #elif _FX_SYSTEM == _FX_S2308
     result = DOUBLE_TO_FX_S2308(a);
 #elif _FX_SYSTEM == _FX_S4716
-    result = DOUBLE_TO_FX_S4716(a);
+    result = DOUBLE_TO_FX(a);
 #endif 
     
     return result;
 }
 
-double fx_to_double(fx_type fa){
+double fix_to_double(fx_type fa){
     double result = 0;
 
 #if _FX_SYSTEM == _FX_S1615
@@ -395,13 +395,13 @@ double fx_to_double(fx_type fa){
 #elif _FX_SYSTEM == _FX_S3231
     result = fxToDouble(fa);
 #elif _FX_SYSTEM == _FX_S1516
-    result = fx_s1516_to_double(fa);
+//  result = fx_s1516_to_double(fa);
 #elif _FX_SYSTEM == _FX_S3132
     result = fx_s3132_to_double(fa);
 #elif _FX_SYSTEM == _FX_S2308
     result = FX_S2308_TO_DOUBLE(fa);
 #elif _FX_SYSTEM == _FX_S4716
-    result = FX_S4716_TO_DOUBLE(fa);
+    result = FX_TO_DOUBLE(fa);
 #endif 
     
     return result;
@@ -419,34 +419,34 @@ int main(void)
     scanf("%lf %lf", &a, &b);
 
     fx_type fa, fb;
-    fa = double_to_fx(a);
-    fb = double_to_fx(b);
+    fa = double_to_fix(a);
+    fb = double_to_fix(b);
     
-    printf("1. Add: %lf\n",  fx_to_double(fx_add(fa, fb)));
-    printf("2. Sub: %lf\n",   fx_to_double(fx_sub(fa, fb)));
+    printf("1. Add: %lf\n",  fix_to_double(fx_add(fa, fb)));
+    printf("2. Sub: %lf\n",   fix_to_double(fx_sub(fa, fb)));
     
 #if _FX_CALCULATION_TYPE == _FX_LONGLONG
     int num = 5;
-    printf("3. Mul1: %lf\n",   fx_to_double(fx_mul1(fa,  fb)));
-    printf("   Mul2: %lf\n",   fx_to_double(fx_mul2(fa,  fb)));
-    printf("   Mul3: %lf\n",   fx_to_double(fx_mul3(fa,  fb)));
+    printf("3. Mul1: %lf\n",   fix_to_double(fx_mul1(fa,  fb)));
+    printf("   Mul2: %lf\n",   fix_to_double(fx_mul2(fa,  fb)));
+    printf("   Mul3: %lf\n",   fix_to_double(fx_mul3(fa,  fb)));
     
-    printf("4. Div1: %lf\n",   fx_to_double(fx_div1(fa, fb)));
-    printf("   Div2: %lf\n",   fx_to_double(fx_div2(fa, fb)));
-    printf("   Div3: %lf\n",   fx_to_double(fx_div3(fa, fb)));
+    printf("4. Div1: %lf\n",   fix_to_double(fx_div1(fa, fb)));
+    printf("   Div2: %lf\n",   fix_to_double(fx_div2(fa, fb)));
+    printf("   Div3: %lf\n",   fix_to_double(fx_div3(fa, fb)));
 
 #elif _FX_CALCULATION_TYPE == _FX_DOUBLE
     int num = 11;
-    printf("3. Mul: %lf\n",   fx_to_double(fx_mul(fa,  fb)));
-    printf("4. Div: %lf\n",   fx_to_double(fx_div(fa, fb)));
-    printf("5. Sqrt: %lf\n",   fx_to_double(fx_sqrt(fa)));
-    printf("6. Pow: %lf\n",  fx_to_double(fx_pow(fa,fb)));
+    printf("3. Mul: %lf\n",   fix_to_double(fx_mul(fa,  fb)));
+    printf("4. Div: %lf\n",   fix_to_double(fx_div(fa, fb)));
+    printf("5. Sqrt: %lf\n",   fix_to_double(fx_sqrt(fa)));
+    printf("6. Pow: %lf\n",  fix_to_double(fx_get_pow(fa,fb)));
     printf("7. PI: %lf\n", fx_pi());
-    printf("8. Inv PI:\n", fx_inv_pi());
-    printf("9. Double to FX: %lf %lf\n", fa, fb);
-    printf("10. FX to Double: %lf %lf\n", fx_to_double(fa), fx_to_double(fb));
+    printf("8. Inv PI: %lf\n", fx_inv_pi());
+    printf("9. Double to FX: %lld %lld\n", fa, fb);
+    printf("10. FX to Double: %lf %lf\n", fix_to_double(fa), fix_to_double(fb));
 #endif
-    printf("%d. Sin(a): %lf\n", num, fx_to_double(fx_sin(fa)));
+    printf("%d. Sin(a): %lf\n", num, fix_to_double(fx_sin(fa)));
 
     return 0;
 }

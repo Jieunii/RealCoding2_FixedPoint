@@ -35,7 +35,7 @@ fixed32 fx32_sind(fixed32 fa)
     return ( sign *( ret0 + ((diff*(fa&0xFFFF))>>16) )); 
 }
 
-fx_s3132 fx_s3132_mul(fx_s3132 a, fx_s3132 b) {
+fx_s3132 fx_s3132_mul0(fx_s3132 a, fx_s3132 b) {
 	return _FX_S3132_mul(a, b);
 }
 fx_s3132 fx_s3132_mul1(fx_s3132 a, fx_s3132 b) {
@@ -44,7 +44,7 @@ fx_s3132 fx_s3132_mul1(fx_s3132 a, fx_s3132 b) {
 fx_s3132 fx_s3132_mul2(fx_s3132 a, fx_s3132 b) {
 	return _FX_S3132_mul2(a, b);
 }
-fx_s3132 fx_s3132_div(fx_s3132 a, fx_s3132 b) {
+fx_s3132 fx_s3132_div0(fx_s3132 a, fx_s3132 b) {
 	return _FX_S3132_div(a, b);
 }
 fx_s3132 fx_s3132_div1(fx_s3132 a, fx_s3132 b) {
