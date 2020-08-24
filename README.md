@@ -39,7 +39,7 @@
 
 ### 3.1 Makefile
 
-* makefile을 통해 일일이 모든 .c파일을 컴파일할 필요 없이 'make' command로 실행파일을 생성할 수 있도록 하였습니다.
+* makefile을 통해 일일이 모든 .c파일을 컴파일할 필요 없이 'make' command로 실행파일을 생성할 수 있도록 함.
 
 1. Make ( default )
 기본적인 make 명령어로 생성되는 실행파일은 'fx_s4716'을 기반으로 'double'형의 값들을 변환하여 계산해주는 프로그램입니다.
