@@ -26,7 +26,7 @@
 |fx_mul|두 수의 곱을 구한다.|
 |fx_div|두 수의 나눗셈을 구한다.|
 |fx_sqrt|제곱근을 구한다.|
-|fx_pw|제곱의 값을 구한다.|
+|fx_pow|제곱의 값을 구한다.|
 |fx_sin|sine 값을 구한다.|
 
 ## 2. Comparison
