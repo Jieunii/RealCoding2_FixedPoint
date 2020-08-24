@@ -10,13 +10,13 @@
 * FX_SYSTEM
 
     |FX_SYSTEM|Macr 값|sign bit|정수부|소수부|
-    |---|---|---|---|---|
-    |FX_S1615|1||||
-    |FX_S3231|2||||
-    |FX_S1516|3||||
-    |FX_S3132|4||||
-    |FX_S2308|5||||
-    |FX_S4716|6||||
+    |---|:---:|:---:|---|---|
+    |FX_S1615|1|O|16 bits|15 bits|
+    |FX_S3231|2|O|32 bits|31 bits|
+    |FX_S1516|3|O|15 bits|16 bits|
+    |FX_S3132|4|O|31 bits|32 bits|
+    |FX_S2308|5|O|23 bits|08 bits|
+    |FX_S4716|6|O|47 bits|16 bits|
 
 ### 1.2 Fixed Pint peratin
 |Functin|기능|
