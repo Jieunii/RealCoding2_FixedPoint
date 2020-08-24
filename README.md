@@ -69,3 +69,19 @@ make 명령어로 생성된 파일을 정리/제거하고 싶은 경우, 아래�
 ```
 $ make clean
 ```
+
+## 4. Maintainers
+|StudentID|Name|
+|---|---|
+|201420991|김영진|
+|201620912|김민건|
+|201620890|이상백|
+|201723273|윤지은|
+
+## Reference
+[fx_s1615](https://git.ajou.ac.kr/realcoding2_team1/battle_c_1)
+[fx_s3231](https://git.ajou.ac.kr/fx_s3231/fx_s3231)
+[fx_s1516](https://git.ajou.ac.kr/battle_c_3/fx_s1516)
+[fx_s3132](https://git.ajou.ac.kr/battle_c_4/fx_s3132)
+[fx_s2308](https://git.ajou.ac.kr/battle_C_5/fx_s2308)
+[fx_s4716](https://git.ajou.ac.kr/battle_c_6/fx_s4716)
