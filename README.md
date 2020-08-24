@@ -33,7 +33,7 @@
 
 ### 2.1 Comparison Table
 
-![fx](/uploads/03bc3497bc281029535f2dcfcbb4772f/fx.png)
+![fx](https://user-images.githubusercontent.com/54850435/91063059-73ae2000-e668-11ea-902d-a59f75cdfb79.png)
 
 ## 3. Execution
 
