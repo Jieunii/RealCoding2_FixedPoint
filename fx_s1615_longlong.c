@@ -1,5 +1,5 @@
 #include "fx_s1615_double.h"
-#include "fx_1615_longlong.h"
+#include "fx_s1615_longlong.h"
 
 #define FX32_90    0x002D0000
 #define FX32_180   0x00590000
