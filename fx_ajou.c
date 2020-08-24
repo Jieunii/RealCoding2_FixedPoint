@@ -381,7 +381,7 @@ fx_type double_to_fix(double a){
 #elif _FX_SYSTEM == _FX_S2308
     result = DOUBLE_TO_FX_S2308(a);
 #elif _FX_SYSTEM == _FX_S4716
-    result = DOUBLE_TO_FX(a);
+    result = DOUBLE_TO_FIX(a);
 #endif 
     
     return result;
@@ -401,7 +401,7 @@ double fix_to_double(fx_type fa){
 #elif _FX_SYSTEM == _FX_S2308
     result = FX_S2308_TO_DOUBLE(fa);
 #elif _FX_SYSTEM == _FX_S4716
-    result = FX_TO_DOUBLE(fa);
+    result = FIX_TO_DOUBLE(fa);
 #endif 
     
     return result;
@@ -441,12 +441,12 @@ int main(void)
     printf("4. Div: %lf\n",   fix_to_double(fx_div(fa, fb)));
     printf("5. Sqrt: %lf\n",   fix_to_double(fx_sqrt(fa)));
     printf("6. Pow: %lf\n",  fix_to_double(fx_get_pow(fa,fb)));
-    printf("7. PI: %lf\n", fx_pi());
-    printf("8. Inv PI: %lf\n", fx_inv_pi());
+    printf("7. PI: %lld\n", fx_pi());
+    printf("8. Inv PI: %lld\n", fx_inv_pi());
     printf("9. Double to FX: %lld %lld\n", fa, fb);
     printf("10. FX to Double: %lf %lf\n", fix_to_double(fa), fix_to_double(fb));
 #endif
-    printf("%d. Sin(a): %lf\n", num, fix_to_double(fx_sin(fa)));
+    printf("%d. Sin(a): %lf\n", num, fix_to_double(fx_sin(fix_to_double(fa))));
 
     return 0;
 }

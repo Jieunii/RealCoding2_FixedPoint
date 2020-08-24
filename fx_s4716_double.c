@@ -1,11 +1,11 @@
 #include"fx_s4716_double.h"
 
 double fxd_to_double(fx_s4716 a){
-    double f2d=FX_TO_DOUBLE(a);
+    double f2d=FIX_TO_DOUBLE(a);
     return f2d;
 }
 fx_s4716 double_to_fxd(double a){
-    fx_s4716 d2f=DOUBLE_TO_FX(a);
+    fx_s4716 d2f=DOUBLE_TO_FIX(a);
     return d2f;
 }
 double fxd_add(double a, double b){
