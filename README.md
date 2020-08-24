@@ -6,10 +6,10 @@
 ### 1.1 Fixed point란?
 * 고정 소수점이란 소수점을 사용하여 고정된 자리수의 소수를 나타내는 것이다.
 * 맨 앞자리를 부호 비트로 사용하고 0일 경우 양수, 음일 경우 1을 사용한다.
-* Fixed pint 연산의 경우 소수점을 미리 정해 놓기에 연산시에 값의 손실이 생길 수 있다.  
+* Fixed point 연산의 경우 소수점을 미리 정해 놓기에 연산시에 값의 손실이 생길 수 있다.  
 * FX_SYSTEM
 
-    |FX_SYSTEM|Macr 값|sign bit|정수부|소수부|
+    |FX_SYSTEM|Macro 값|sign bit|정수부|소수부|
     |---|:---:|:---:|---|---|
     |FX_S1615|1|O|16 bits|15 bits|
     |FX_S3231|2|O|32 bits|31 bits|
@@ -19,7 +19,7 @@
     |FX_S4716|6|O|47 bits|16 bits|
 
 ### 1.2 Fixed Point operation
-|Functin|기능|
+|Function|기능|
 |---|---|
 |fx_add|두 수의 합을 구한다.|
 |fx_sub|두 수의 차를 구한다.|
