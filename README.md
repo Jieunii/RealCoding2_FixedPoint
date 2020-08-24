@@ -1,5 +1,5 @@
 # aju_fx_team6
-아주대학교 실전코딩2 fixed pint peratin
+아주대학교 실전코딩2 fixed point operation
 
 ## 1. Fixed Point
 
@@ -18,7 +18,7 @@
     |FX_S2308|5|O|23 bits|08 bits|
     |FX_S4716|6|O|47 bits|16 bits|
 
-### 1.2 Fixed Point peratin
+### 1.2 Fixed Point operation
 |Functin|기능|
 |---|---|
 |fx_add|두 수의 합을 구한다.|
