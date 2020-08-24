@@ -1,7 +1,12 @@
 #include "fx_ajou.h"
 
+#ifndef _FX_SYSTEM
 #define _FX_SYSTEM _FX_S4716
+#endif
+
+#ifndef _FX_CALCULATION_TYPE
 #define _FX_CALCULATION_TYPE _FX_DOUBLE
+#endif
 
 #if _FX_SYSTEM == _FX_S1615
 typedef fx_s1615 fx_type;
@@ -27,7 +32,6 @@ fx_type fx_get_pow(fx_type fa, fx_type fb)
 	result = power_fx_s1615_int(fa, FX_S1615_INT_TO_DOUBLE(fb));
 	return result;
 }
-
 
 fx_type fx_sqrt(fx_type fa)
 {
@@ -166,7 +170,6 @@ fx_type fx_get_pow(fx_type fa, fx_type fb)
 	return result;
 }
 
-
 fx_type fx_sqrt(fx_type fa)
 {
 	fx_type result = 0;
@@ -257,7 +260,6 @@ fx_type fx_sub(fx_type fa, fx_type fb)
 	return result;
 }
 
-
 fx_type fx_sin(fx_type fa)
 {
 	fx_type result = 0;
@@ -305,7 +307,6 @@ fx_type fx_get_pow(fx_type fa, fx_type fb)
 	result = fx_s1516_double_pow(fx_s1516_to_double(fa), fx_s1516_to_double(fb));
 	return result;
 }
-
 
 fx_type fx_sqrt(fx_type fa)
 {
@@ -445,7 +446,6 @@ fx_type fx_get_pow(fx_type fa, fx_type fb)
 	return result;
 }
 
-
 fx_type fx_sqrt(fx_type fa)
 {
 	fx_type result = 0;
@@ -583,7 +583,6 @@ fx_type fx_get_pow(fx_type fa, fx_type fb)
 	result = fx_s2308_double_pow(fa, FX_S2308_TO_DOUBLE(fb));
 	return result;
 }
-
 
 fx_type fx_sqrt(fx_type fa)
 {
@@ -723,7 +722,6 @@ fx_type fx_get_pow(fx_type fa, fx_type fb)
 	return result;
 }
 
-
 fx_type fx_sqrt(fx_type fa)
 {
 	fx_type result = 0;
@@ -813,7 +811,6 @@ fx_type fx_sub(fx_type fa, fx_type fb)
 
 	return result;
 }
-
 
 fx_type fx_sin(fx_type fa)
 {
