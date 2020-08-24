@@ -29,76 +29,11 @@
 |fx_pow|제곱의 값을 구한다.|
 |fx_sin|sine 값을 구한다.|
 
-## 2. Comparison
+## 2. Performance
 
-### 2.1 Speed
-1. FX_S1615
-   
-    |FX_SYSTEM|longlong_mul1|longlong_mul2|longlong_mul3|
-    |---|:---:|:---:|:---:|
-    |FX_S1615(32bit)|3|2|1|
-    |FX_S1615(64bit)|3|2|1|
+### 2.1 Comparison Table
 
-    |FX_SYSTEM|longlong_div1|longlong_div2|longlong_div3|
-    |---|:---:|:---:|:---:|
-    |FX_S1615(32bit)|3|2|1|
-    |FX_S1615(64bit)|1|2|3|
-
-2. FX_S3231
-   
-    |FX_SYSTEM|longlong_mul1|longlong_mul2|longlong_mul3|double_mul|
-    |---|:---:|:---:|:---:|:---:|
-    |FX_S3231(64bit)|1|3|2|4|
-
-    |FX_SYSTEM|longlong_div1|longlong_div2|longlong_div3|double_div|
-    |---|:---:|:---:|:---:|:---:|
-    |FX_S3231|2|3|1|4|
-
-3. FX_S1516
-   
-    |FX_SYSTEM|longlong_mul0|longlong_mul1|longlong_mul2|longlong_mul3|longlong_mul4|double_mul|
-    |---|:---:|:---:|:---:|:---:|:---:|:---:|
-    |FX_S1516(32bit)|4|1|2|3|6|5|
-
-    |FX_SYSTEM|longlong_div0|longlong_div1|longlong_div2|double_div|
-    |---|:---:|:---:|:---:|:---:|
-    |FX_S1516(32bit)|3|2|1|4|
-
-4. FX_S3132
-   
-    |FX_SYSTEM|longlong_mul|longlong_mul1|longlong_mul2|
-    |---|:---:|:---:|:---:|
-    |FX_S3132|1|3|2|
-
-    |FX_SYSTEM|longlong_div|longlong_div1|longlong_div2|
-    |---|:---:|:---:|:---:|
-    |FX_S3132|1|3|2|
-
-5. FX_S2308
-   
-    |FX_SYSTEM|longlong_mul1|longlong_mul2|longlong_mul3|longlong_mul4|double_mul|
-    |---|:---:|:---:|:---:|:---:|:---:|
-    |FX_S2308(32bit)|3|4|2|1|5|
-    |FX_S2308(64bit)|4|3|2|1|5|
-
-    |FX_SYSTEM|longlong_div1|longlong_div2|
-    |---|:---:|:---:|
-    |FX_S2308(32bit)|1|2|
-    |FX_S2308(64bit)|1|2|
-
-6. FX_S4716
-   
-    |FX_SYSTEM|longlong_mul1|longlong_mul2|longlong_mul3|double_mul|
-    |---|:---:|:---:|:---:|:---:|
-    |FX_S4716(32bit)|3|1|2|4|
-    |FX_S4716(64bit)|2|3|4|1|
-
-    |FX_SYSTEM|longlong_div1|longlong_div2|longlong_div2|
-    |---|:---:|:---:|:---:|
-    |FX_S4716(32bit)|1|2|3|
-    |FX_S4716(64bit)|1|3|2|
-
-### 2.2 Accuracy
+![Fixed](/uploads/fcbc3f87562e43c35847f4b71e306746/Fixed.png)
 
 ## 3. Execution
 
